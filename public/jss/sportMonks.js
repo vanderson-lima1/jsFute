@@ -36,6 +36,7 @@ function apiSportMonks (action, params = []) {
     success: (response) => {
       
       console.log(response);
+      return response;
       // order UF.
       /*
       response.sort(function(a, b){
@@ -60,6 +61,7 @@ function apiSportMonks (action, params = []) {
     },
     error: (response) => {
         console.error('Error', response)
+        return null;
     }
   });
 };
