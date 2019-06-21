@@ -17,17 +17,21 @@ axios({
   .catch(erro => {
     console.log(error)
   });*/
-function apiSportMonks (action, params = []) { 
-  let urlSportMonks = 'https://soccer.sportmonks.com/api/v2.0'
+export function apiSportMonks (action, params) { 
+  let urlSportMonks = 'https://soccer.sportmonks.com/api/v2.0';
   let urlAction = action;
 
-  let urlParm;
-    
-  for(let i=0; i => params.size;i++){
-    urlParm = urlParm + params[i];
-  }
+  let urlParm = '';
 
-  let urlTokenSportMonks = '?api_token=XHwSzUevoeWCREsXO44vaKTojHzrGIS4UtOoMA84YIyYAlgrDMT6BsD3FFU0';
+  if(params != '') {
+    //for(let i=0; i < params.size;i++){
+    //  urlParm = urlParm + params[i];
+    //}
+    urlParm = params;
+  };
+
+  //let urlTokenSportMonks = '?api_token=XHwSzUevoeWCREsXO44vaKTojHzrGIS4UtOoMA84YIyYAlgrDMT6BsD3FFU0';
+  let urlTokenSportMonks = '?api_token=EXvm21l8AzmE2K8LmbexE7PRr4OqforQDO8j1HiacYXS2uG4OqQLgQrVifV0';
 
   $.ajax({
     url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
@@ -60,7 +64,7 @@ function apiSportMonks (action, params = []) {
       })*/
     },
     error: (response) => {
-        console.error('Error', response)
+        console.error('Error', response);
         return null;
     }
   });
