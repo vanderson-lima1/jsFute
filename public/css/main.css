@@ -1,13 +1,23 @@
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+}
+
+.c-container {
+  margin-top: 1rem;
+}
+
 .c-card-league {
   width: 18rem;  
+  margin-bottom: 1rem;
   z-index: 0;
-  box-shadow: rgba(103, 106, 110, 0.479) 0px 0px 5px 0px;
+  box-shadow: rgba(103, 106, 110, 0.479) 5px 0px 5px 0px;
   transition: all .5s ease;
 }
 
 .c-card-league:hover {
   box-shadow: rgba(45, 243, 6, 0.479) 0px 0px 5px 0px;    
-  margin: -1%;
 }
 
 /*

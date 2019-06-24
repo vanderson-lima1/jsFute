@@ -1,5 +1,5 @@
 import {apiSportMonks} from '../js/sportMonks.js';
-let data = apiSportMonks('/leagues','');
+let data = await apiSportMonks('/leagues','');
 let leagues;
 
 if(data != null){

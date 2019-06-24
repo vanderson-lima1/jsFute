@@ -17,7 +17,7 @@ axios({
   .catch(erro => {
     console.log(error)
   });*/
-export function apiSportMonks (action, params) { 
+  export async function apiSportMonks (action, params) { 
   let urlSportMonks = 'https://soccer.sportmonks.com/api/v2.0';
   let urlAction = action;
 
