@@ -1,13 +1,13 @@
 import {apiSportMonks} from '../js/sportMonks.js';
-let data = await apiSportMonks('/leagues','');
-let leagues;
+let data = apiSportMonks('/leagues','');
 
 if(data != null){
+  let leagues = [];
   leagues = JSON.stringify(data);
-  leagues.forEach(league => {
-    let card = league;
+  leagues.forEach(  item => {
+    //let card = item[index];
     //$('#cardTest').append(card);  
-    console.log("/league: " + league);
+    console.log("/league: " + item);
   });
 }
 else {

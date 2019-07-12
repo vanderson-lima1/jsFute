@@ -17,7 +17,8 @@
 }
 
 .c-card-league:hover {
-  box-shadow: rgba(45, 243, 6, 0.479) 0px 0px 5px 0px;    
+  box-shadow: rgb(23, 252, 2) 0px 0px 6px 0px;
+  border: 0rem;
 }
 
 /*

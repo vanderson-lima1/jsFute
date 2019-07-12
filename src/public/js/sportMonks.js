@@ -32,7 +32,7 @@ axios({
 
   let urlTokenSportMonks = '?api_token=EXvm21l8AzmE2K8LmbexE7PRr4OqforQDO8j1HiacYXS2uG4OqQLgQrVifV0';
 
-  $.ajax({
+  await $.ajax({
     url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
     dataType: 'json',
     type: 'GET',
