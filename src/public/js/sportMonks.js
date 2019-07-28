@@ -18,7 +18,7 @@ axios({
     console.log(error)
   });*/
   //export async function apiSportMonks (action, params) { 
-  export function apiSportMonks (callback,action, params) { 
+  export function apiSportMonks (action, params) { 
   let urlSportMonks = 'https://soccer.sportmonks.com/api/v2.0';
   let urlAction = action;
 
@@ -32,7 +32,8 @@ axios({
   };
 
   let urlTokenSportMonks = '?api_token=hvKskSL1XiEf3glA4QceYiPeFNwDpaOJzp8iitIpikDo3GEioubYVs4DWsEM';
-  
+
+  $.when($.ajax()).then(ajaxOK,ajaxNOK);  
 
 //  documento.ready( function() {
 //await $.ajax({
@@ -45,7 +46,6 @@ axios({
         console.log("response: "+response);
         let datas = JSON.stringify(response);
         //return datas;
-        callback();
         return datas;
         // order UF.
         /*
@@ -72,7 +72,6 @@ axios({
       error: (response) => {
           console.error('Error', response);
           //return null;
-          callback();
           return datas;
       }
     });

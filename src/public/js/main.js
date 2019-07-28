@@ -1,7 +1,7 @@
 import {apiSportMonks} from '../js/sportMonks.js';
 
 //let documento = $(document);
-let datas =  apiSportMonks(callback,'/leagues','');
+let datas =  apiSportMonks('/leagues','');
 if(datas != null){
   //let leagues = [];
   let leagues = JSON.stringify(datas);
