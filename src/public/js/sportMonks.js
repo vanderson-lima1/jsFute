@@ -31,12 +31,50 @@ axios({
     urlParm = params;
   };
 
-  let urlTokenSportMonks = '?api_token=hvKskSL1XiEf3glA4QceYiPeFNwDpaOJzp8iitIpikDo3GEioubYVs4DWsEM';
+  let urlTokenSportMonks = '?api_token=GO6XQdYAuqHMAjoLyzoAIPFwZvqZyEesvPtS7pb7QZrb18o579P8IQ8GkSso';
 
-  $.when($.ajax()).then(ajaxOK,ajaxNOK);  
+  $.ajax(
+    {
+      url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
+      dataType: 'json',
+      type: 'GET',
+      async: false,
+      cache: false,
+      timeout: 30000,
+      success: (response) => {
+        console.log("response success" + response);
+        return ajaxOK(response);
+      },
+      error: (response) => {
+        return ajaxNOK(response);
+      }
+    }
+  );
+
+  //$.when($.ajax(
+ /*return $.when($.ajax(
+    {
+      url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
+      dataType: 'json',
+      type: 'GET'
+    }  
+  )).then(ajaxOK(), ajaxNOK());
+  */
+
+  function ajaxOK(response){
+    let data = JSON.stringify(response);
+    console.log("response ajaxOK: "+data);
+    return data;   
+  };
+  
+  function ajaxNOK(){
+    console.log("response NOK: "+ response);
+    return null; 
+  };
 
 //  documento.ready( function() {
 //await $.ajax({
+/** 
     $.ajax({
       url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
       dataType: 'json',
@@ -57,23 +95,24 @@ axios({
                 return 1;
             }
             return 0;
-        })*/
+        })
 
         // Save to localStorage
         //localStorage.setItem('listaUF', JSON.stringify(response));
 
         // build options list
-        /*
-        $(response).each(function(index, item){
-            var option = $(`<option value="${item.sigla}">${item.sigla}</option>`);
-            $('#addressUF').append(option);
-        })*/
-      },
-      error: (response) => {
-          console.error('Error', response);
-          //return null;
-          return datas;
-      }
-    });
+        //
+        //$(response).each(function(index, item){
+        //    var option = $(`<option value="${item.sigla}">${item.sigla}</option>`);
+        //    $('#addressUF').append(option);
+        //})
+        //},
+        //error: (response) => {
+        //    console.error('Error', response);
+        //    //return null;
+        //    return datas;
+        //}
+    //});
   //});
+*/
   };
