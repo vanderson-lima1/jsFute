@@ -33,7 +33,7 @@ axios({
 
   let urlTokenSportMonks = '?api_token=GO6XQdYAuqHMAjoLyzoAIPFwZvqZyEesvPtS7pb7QZrb18o579P8IQ8GkSso';
 
-  $.ajax(
+  return $.ajax(
     {
       url: urlSportMonks+urlAction+urlParm+urlTokenSportMonks,
       dataType: 'json',
@@ -114,5 +114,5 @@ axios({
         //}
     //});
   //});
-*/
+*/  
   };

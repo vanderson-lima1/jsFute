@@ -2,9 +2,10 @@ import {apiSportMonks} from '../js/sportMonks.js';
 
 //let documento = $(document);
 let datas =  apiSportMonks('/leagues','');
+console.log("main js datas: "+datas);
 if(datas != null){
   //let leagues = [];
-  let leagues = JSON.stringify(datas);
+  let leagues = datas;
   console.log("data main: "+ datas);
   //leagues = JSON.stringify(datas["datas"]);
   console.log("leagues main: " + leagues);
