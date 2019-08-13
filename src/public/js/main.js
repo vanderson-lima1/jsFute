@@ -3,6 +3,7 @@ import {apiSportMonks} from '../js/sportMonks.js';
 //let documento = $(document);
 let datas =  apiSportMonks('/leagues','');
 console.log("main js datas: "+datas);
+console.log("main js datas stringify: "+ JSON.stringify(datas));
 if(datas != null){
   //let leagues = [];
   let leagues = datas;
@@ -11,7 +12,7 @@ if(datas != null){
   console.log("leagues main: " + leagues);
   //$(response).each(function(index, item)
   //leagues.forEach(  item => {
-  $.each(leagues, function (index) {
+  $.each(leagues.responseJSON, function (index) {
     //let card = item[index];
     //$('#cardTest').append(card);  
     console.log("league: " + this[index] + " " + index);

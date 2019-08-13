@@ -62,13 +62,19 @@ axios({
   */
 
   function ajaxOK(response){
-    let data = JSON.stringify(response);
+    // .stringify transforma json em string
+    //let data = JSON.stringify(response);
+
+    // .parse transforma json em objeto
+    //let data = JSON.parse(response);
+
+    let data = response;
     console.log("response ajaxOK: "+data);
-    return data;   
+    return data.data;   
   };
   
-  function ajaxNOK(){
-    console.log("response NOK: "+ response);
+  function ajaxNOK(response){
+    console.log("response NOK ERRO!!!: "+ response);
     return null; 
   };
 
