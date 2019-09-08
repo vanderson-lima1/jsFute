@@ -21,7 +21,6 @@ axios({
   export function apiSportMonks (action, params) { 
   let urlSportMonks = 'https://soccer.sportmonks.com/api/v2.0';
   let urlAction = action;
-
   let urlParm = '';
 
   if(params != '') {
@@ -70,6 +69,8 @@ axios({
 
     let data = response;
     console.log("response ajaxOK: "+data);
+    // Save to localStorage
+    localStorage.setItem("listleagues", JSON.stringify(data.data));
     return data.data;   
   };
   
