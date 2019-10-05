@@ -7,6 +7,7 @@ app.get('/',function(req,res){
   console.log(__dirname);
   //api = new Dotenv().API_SPORTMONKS;  
   //console.log(api);
+  let action = req.query.action;
   res.sendFile(path.join(__dirname+'/src/index.html'));
   //__dirname : It will resolve to your project folder.
 });

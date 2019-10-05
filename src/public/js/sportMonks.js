@@ -42,10 +42,10 @@ axios({
       timeout: 30000,
       success: (response) => {
         console.log("response success" + response);
-        return ajaxOK(response);
+        ajaxOK(response);
       },
       error: (response) => {
-        return ajaxNOK(response);
+        ajaxNOK(response);
       }
     }
   );
@@ -71,12 +71,10 @@ axios({
     console.log("response ajaxOK: "+data);
     // Save to localStorage
     localStorage.setItem("listleagues", JSON.stringify(data.data));
-    return data.data;   
   };
   
   function ajaxNOK(response){
-    console.log("response NOK ERRO!!!: "+ response);
-    return null; 
+    console.log("response NOK ERRO!!!: "+ response);    
   };
 
 //  documento.ready( function() {

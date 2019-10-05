@@ -10,6 +10,7 @@
 
 .c-card-league {
   width: 18rem;  
+  height: 21rem;
   margin-bottom: 1rem;
   z-index: 0;
   box-shadow: rgba(103, 106, 110, 0.479) 5px 0px 5px 0px;
@@ -20,6 +21,13 @@
   box-shadow: rgb(23, 252, 2) 0px 0px 6px 0px;
   border: 0rem;
 }
+
+/*
+.c-card-img-top {
+  width: auto;
+  height: auto;  
+}
+*/
 
 /*
 @media (min-width: 34em) {
